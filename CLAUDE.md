@@ -14,6 +14,18 @@ Full rules auto-load from `.claude/rules/spec-workflow.md`.
 | `/tasks <feature>` | Ordered implementation checklist |
 | `/implement <feature>` | One task at a time |
 | `/validate <feature>` | Verify every AC passes |
+| `/goal <feature>` | Export spec as a Paperclip goal definition |
+| `/ticket <feature>` | Export tasks as Paperclip tickets with model + budget hints |
+
+## Paperclip Integration
+
+This repo integrates with [Paperclip](https://github.com/paperclipai/paperclip) for multi-agent orchestration.
+
+- `.paperclip/agent-roles.md` — org chart mapping (architect, spec-reviewer, implementer, validator)
+- `.paperclip/context-injection.md` — what context Paperclip injects per agent role
+- `.paperclip/budgets.md` — per-complexity budget caps and per-ticket cost estimates
+
+**Layer split:** spec-blueprint owns *what* and *quality*. Paperclip owns *who*, *when*, and *cost*.
 
 ## Model Selection
 
