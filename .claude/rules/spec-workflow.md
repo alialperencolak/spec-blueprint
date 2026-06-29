@@ -29,8 +29,15 @@ Skip `plan` for low-complexity features (no new external deps, clear path, isola
 - For complex `/implement` or `/validate` work, commands run with `context: fork` — they get isolated context automatically.
 - If a session degrades (responses become shallow), use `/clear` and resume from `tasks.md` progress.
 
+## TDD — Test Before Code
+During `/implement`, always follow Red → Green → Refactor per task:
+1. **Red**: translate the task's spec AC (Given/When/Then) into a failing test. Run it. Confirm it fails with an assertion error, not a syntax error.
+2. **Green**: write the minimum code to make the test pass. Run again. Confirm green.
+3. **Refactor**: clean the code while keeping the test green.
+A task is NOT done if no passing test exists for it.
+
 ## One Task at a Time
-During `/implement`: complete one task, mark it `[x]`, report, then proceed. Never silently batch tasks.
+During `/implement`: complete one task (full TDD cycle), mark it `[x]` with the test file noted, report, then proceed. Never silently batch tasks.
 
 ## Validation Is Not Optional
 A feature is not done until `/validate` confirms all acceptance criteria pass. "Works on my machine" is not validation.

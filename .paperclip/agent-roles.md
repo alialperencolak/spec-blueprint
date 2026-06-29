@@ -39,15 +39,17 @@ Architecture Owner
 | Context inject | `specs/constitution.md`, target `spec.md` |
 | Approval gate | Spec must pass review before `/plan` or `/tasks` can proceed |
 
-### implementer (Claude Code)
+### developer (Claude Code)
 | Field | Value |
 |-------|-------|
-| Role | Developer |
+| Role | TDD Developer |
+| Agent file | `.claude/agents/developer.md` |
 | Model | `claude-haiku-4-5-20251001` (simple tasks) / `claude-sonnet-4-6` (normal) / `claude-opus-4-8` (complex) |
 | Budget cap | Per ticket — see `budgets.md` |
 | Triggers | Ticket checkout (atomic — only one agent per task) |
-| Deliverables | Checked-off task in `tasks.md`, changed source files |
+| Deliverables | Passing test + implementation, checked-off task in `tasks.md` |
 | Context inject | `CLAUDE.md`, `.claude/rules/spec-workflow.md`, feature `spec.md`, `plan.md`, `tasks.md` |
+| TDD cycle | Red (failing test from AC) → Green (min code to pass) → Refactor |
 
 ### validator (Claude Code)
 | Field | Value |
