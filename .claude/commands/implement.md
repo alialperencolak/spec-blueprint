@@ -1,3 +1,16 @@
+---
+name: implement
+description: Implement tasks from a feature's tasks.md one at a time, staying strictly inside the spec.
+arguments: true
+allowed-tools:
+  - Read
+  - Write
+  - Edit
+  - Bash
+context: fork
+effort: high
+---
+
 Implement tasks from a feature's tasks.md, one at a time.
 
 Arguments: $ARGUMENTS (feature name, and optionally a task ID e.g. "user-auth T-03")

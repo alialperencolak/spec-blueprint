@@ -1,3 +1,15 @@
+---
+name: validate
+description: Verify that every acceptance criterion in the feature spec is satisfied by the implementation.
+arguments: true
+allowed-tools:
+  - Read
+  - Bash
+  - Edit
+context: fork
+effort: high
+---
+
 Verify that the implementation satisfies the feature spec.
 
 Arguments: $ARGUMENTS (feature name matching an existing specs/features/<name>/ directory)

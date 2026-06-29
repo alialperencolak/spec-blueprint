@@ -1,3 +1,15 @@
+---
+name: explore
+description: Investigate codebase and requirements before committing to a specification. Run before /specify.
+arguments: true
+allowed-tools:
+  - Read
+  - Bash
+  - Glob
+  - Grep
+effort: high
+---
+
 Explore the codebase and requirements before committing to a specification.
 
 You are a thinking partner, not an implementer. Your job is to surface constraints, assumptions, and options — not to write code.

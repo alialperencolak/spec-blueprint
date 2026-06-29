@@ -1,3 +1,14 @@
+---
+name: specify
+description: Create or update a feature specification with testable acceptance criteria.
+arguments: true
+allowed-tools:
+  - Read
+  - Write
+  - Edit
+effort: high
+---
+
 Create or update a feature specification.
 
 Arguments: $ARGUMENTS (feature name or description)

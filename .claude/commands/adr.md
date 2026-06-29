@@ -1,3 +1,14 @@
+---
+name: adr
+description: Capture an architecture decision as a testable hypothesis with a validation plan.
+arguments: true
+allowed-tools:
+  - Read
+  - Write
+  - Edit
+effort: medium
+---
+
 Create an Architecture Decision Record.
 
 Arguments: $ARGUMENTS (short decision title, e.g. "use postgres for primary storage")

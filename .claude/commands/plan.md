@@ -1,3 +1,14 @@
+---
+name: plan
+description: Generate a technical implementation plan from a ready feature spec.
+arguments: true
+allowed-tools:
+  - Read
+  - Write
+  - Edit
+effort: high
+---
+
 Generate a technical implementation plan from a ready spec.
 
 Arguments: $ARGUMENTS (feature name matching an existing specs/features/<name>/ directory)

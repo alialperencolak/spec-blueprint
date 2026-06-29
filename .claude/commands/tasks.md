@@ -1,3 +1,14 @@
+---
+name: tasks
+description: Break a feature plan into an ordered, verifiable task checklist ready for implementation.
+arguments: true
+allowed-tools:
+  - Read
+  - Write
+  - Edit
+effort: medium
+---
+
 Generate an ordered task breakdown from a feature plan.
 
 Arguments: $ARGUMENTS (feature name matching an existing specs/features/<name>/ directory)
