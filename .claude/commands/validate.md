@@ -7,6 +7,7 @@ allowed-tools:
   - Bash
   - Edit
 context: fork
+model: sonnet
 effort: high
 ---
 
