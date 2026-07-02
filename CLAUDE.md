@@ -11,11 +11,11 @@ Full rules auto-load from `.claude/rules/spec-workflow.md`.
 | `/specify <feature>` | Write spec with Gherkin AC |
 | `/adr <title>` | Capture architecture decision |
 | `/plan <feature>` | Technical design (skip if low complexity) |
-| `/tasks <feature>` | Ordered implementation checklist |
+| `/tasks <feature>` | Ordered implementation checklist — always followed by `/goal` + `/ticket` |
 | `/implement <feature>` | One task at a time |
 | `/validate <feature>` | Verify every AC passes |
-| `/goal <feature>` | Export spec as a Paperclip goal definition |
-| `/ticket <feature>` | Export tasks as Paperclip tickets with model + budget hints |
+| `/goal <feature>` | Export spec as a Paperclip goal definition (auto-run by `/tasks`) |
+| `/ticket <feature>` | Export tasks as Paperclip tickets with model + budget hints (auto-run by `/tasks`) |
 
 ## Paperclip Integration
 
@@ -24,6 +24,8 @@ This repo integrates with [Paperclip](https://github.com/paperclipai/paperclip) 
 - `.paperclip/agent-roles.md` — org chart mapping (architect, spec-reviewer, implementer, validator)
 - `.paperclip/context-injection.md` — what context Paperclip injects per agent role
 - `.paperclip/budgets.md` — per-complexity budget caps and per-ticket cost estimates
+
+**Every feature is always bound to Paperclip.** `/tasks` automatically runs `/goal` and `/ticket` right after writing `tasks.md`, so `paperclip-goal.md` and `paperclip-tickets.md` exist as soon as tasks do — no separate manual step, and the feature shows up on the Paperclip dashboard immediately.
 
 **Layer split:** spec-blueprint owns *what* and *quality*. Paperclip owns *who*, *when*, and *cost*.
 

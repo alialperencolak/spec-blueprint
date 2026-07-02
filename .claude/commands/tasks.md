@@ -38,4 +38,8 @@ Rules:
 - If a task is ambiguous, break it down further rather than leaving it vague.
 - Every spec acceptance criterion must map to at least one task.
 
-Output: path of created/updated tasks.md, count of tasks created, and which spec acceptance criteria are covered.
+After `tasks.md` is written, always run the Paperclip export so the feature shows up on the Paperclip dashboard immediately:
+4. Run `/goal $ARGUMENTS` to generate `paperclip-goal.md`.
+5. Run `/ticket $ARGUMENTS` to generate `paperclip-tickets.md`.
+
+Output: path of created/updated tasks.md, count of tasks created, which spec acceptance criteria are covered, plus the paths and summaries returned by `/goal` and `/ticket`.

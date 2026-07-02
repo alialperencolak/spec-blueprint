@@ -35,4 +35,13 @@ Rules:
 - Do NOT fill in plan.md or tasks.md yet.
 - Note any complexity drivers identified (reference `specs/architecture/principles.md`).
 
+## Report to Paperclip
+If `.paperclip/agent-keys.env` exists, notify the `spec-reviewer` agent (its trigger per `.paperclip/agent-roles.md` is a spec.md status change to Draft/Ready):
+```
+source .paperclip/agent-keys.env && npx paperclipai agent-prompt spec-reviewer "$PAPERCLIP_SPEC_REVIEWER_KEY" \
+  --title "Review spec: <feature-name> (<status>)" \
+  "spec.md for <feature-name> is now <status>. Review specs/features/<feature-name>/spec.md against specs/constitution.md."
+```
+If the file doesn't exist, skip this step silently — Paperclip isn't configured for this clone.
+
 Output: path of created/updated spec.md, list of open questions needing human input, and final status (Draft/Ready).

@@ -41,3 +41,6 @@ During `/implement`: complete one task (full TDD cycle), mark it `[x]` with the 
 
 ## Validation Is Not Optional
 A feature is not done until `/validate` confirms all acceptance criteria pass. "Works on my machine" is not validation.
+
+## Every Feature Is Always Bound to Paperclip
+`/tasks` always runs `/goal` and `/ticket` immediately after writing `tasks.md` — this is not optional per feature. `paperclip-goal.md` and `paperclip-tickets.md` must exist as soon as `tasks.md` does, so the feature and its agents appear on the Paperclip dashboard without a manual export step.
